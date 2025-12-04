@@ -1,12 +1,16 @@
 "use client";
+import { CardAward } from "./card-award";
 import { CareerContent } from "./career";
 import { SpotlightContent } from "./spotlight";
+import { Timeline } from "./timeline";
 
 export function MainContent() {
     return (
         <div>
             <SpotlightContent />
+            <CardAward />
             <CareerContent />
+            <Timeline />
             <div className="container mx-auto p-8 pt-5">
                 <h1 className="mb-4 text-center text-3xl font-bold">
                     Check the navbar at the top of the container
