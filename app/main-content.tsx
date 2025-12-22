@@ -1,13 +1,64 @@
 "use client";
+import { AboutMe } from "./about-me";
+import { Achievements } from "./achievements";
+import { ThreeCardGrid } from "./card-3";
+import { ThreeCardGridStatis } from "./card-3-statis";
 import { CareerContent } from "./career";
+import { PortfolioProjects } from "./portfolio-projects";
 import { SpotlightContent } from "./spotlight";
+import { TechStack } from "./tech-stack";
+import { Timeline } from "./timeline";
 
 export function MainContent() {
     return (
         <div>
             <SpotlightContent />
-            <CareerContent />
-            <div className="container mx-auto p-8 pt-5">
+            <AboutMe />
+            <TechStack />
+            <PortfolioProjects />
+            <Achievements />
+            {/* <CareerContent /> */}
+            <Timeline />
+
+            {/* <ThreeCardGridStatis /> */}
+            {/* <div className="grid grid-cols-2 gap-10 p-10 bg-red-200">
+                <div>
+                    <RotateCard3D
+                        width="50%"
+                        height="200px"
+                        rotate={[85, 95, 85]}
+                        rotateX={[0, 0, 0]}
+                        rotateY={[0, 0, 0]} // ➤ Tambahkan nilai
+                        duration={4}
+                    />
+                </div>
+
+                <div className="row-span-2">
+                    <RotateCard3D
+                        width="100%"
+                        height="200px"
+                        rotate={[90, 90, 90]}
+                        rotateX={[0, 0, 0]}
+                        rotateY={[0, 0, 0]} // ➤ Berbeda
+                        duration={4}
+                    />
+                </div>
+
+                <div>
+                    <RotateCard3D
+                        width="50%"
+                        height="200px"
+                        rotate={[95, 85, 95]}
+                        rotateX={[0, 0, 0]}
+                        rotateY={[0, 0, 0]} // ➤ Tambahkan nilai
+                        duration={4}
+                    />
+                </div>
+            </div> */}
+
+            {/* <RotateCard3D />
+            <ThreeCardGrid /> */}
+            {/* <div className="container mx-auto p-8 pt-5">
                 <h1 className="mb-4 text-center text-3xl font-bold">
                     Check the navbar at the top of the container
                 </h1>
@@ -99,7 +150,7 @@ export function MainContent() {
                         </div>
                     ))}
                 </div>
-            </div>
+            </div> */}
         </div>
     );
 }

@@ -17,16 +17,28 @@ import { MainContent } from "./main-content";
 export function NavbarDemo() {
     const navItems = [
         {
-            name: "Features",
-            link: "#features",
+            name: "Home",
+            link: "#home",
         },
         {
-            name: "Pricing",
-            link: "#pricing",
+            name: "About",
+            link: "#about",
         },
         {
-            name: "Contact",
-            link: "#contact",
+            name: "Skills",
+            link: "#skills",
+        },
+        {
+            name: "Projects",
+            link: "#projects",
+        },
+        {
+            name: "Awards",
+            link: "#awards",
+        },
+        {
+            name: "Experience",
+            link: "#experience",
         },
     ];
 
