@@ -256,54 +256,26 @@ export function TechStack() {
                             className="group relative bg-gradient-to-br from-white/10 to-white/5 rounded-2xl overflow-hidden border border-white/10 hover:border-indigo-500/50 transition-all duration-500 p-6"
                         >
                             {/* Icon & Category Badge */}
-                            <div className="flex items-start justify-between mb-4">
-                                <div className="flex items-center gap-3">
-                                    <div
-                                        className={`text-4xl bg-gradient-to-r ${tech.color} bg-clip-text`}
-                                    >
-                                        {tech.icon}
-                                    </div>
-                                    <div>
-                                        <h4 className="text-xl font-bold text-white group-hover:text-indigo-400 transition-colors">
-                                            {tech.name}
-                                        </h4>
-                                        <span className="text-xs text-neutral-500">
-                                            {tech.category}
-                                        </span>
-                                    </div>
-                                </div>
+                            <div className="flex items-center gap-3 mb-4">
                                 <div
-                                    className={`px-2 py-1 text-xs font-bold bg-gradient-to-r ${tech.color} bg-clip-text text-transparent`}
+                                    className={`text-4xl bg-gradient-to-r ${tech.color} bg-clip-text`}
                                 >
-                                    {tech.level}%
+                                    {tech.icon}
+                                </div>
+                                <div>
+                                    <h4 className="text-xl font-bold text-white group-hover:text-indigo-400 transition-colors">
+                                        {tech.name}
+                                    </h4>
+                                    <span className="text-xs text-neutral-500">
+                                        {tech.category}
+                                    </span>
                                 </div>
                             </div>
 
                             {/* Description */}
-                            <p className="text-sm text-neutral-400 mb-4">
+                            <p className="text-sm text-neutral-400">
                                 {tech.description}
                             </p>
-
-                            {/* Progress Bar */}
-                            <div className="relative">
-                                <div className="h-2 bg-neutral-800 rounded-full overflow-hidden">
-                                    <motion.div
-                                        initial={{ width: 0 }}
-                                        whileInView={{
-                                            width: `${tech.level}%`,
-                                        }}
-                                        transition={{
-                                            duration: 1,
-                                            delay: 0.2 + index * 0.05,
-                                            ease: "easeOut",
-                                        }}
-                                        viewport={{ once: true }}
-                                        className={`h-full bg-gradient-to-r ${tech.color} rounded-full relative`}
-                                    >
-                                        <div className="absolute inset-0 bg-white/20 animate-pulse" />
-                                    </motion.div>
-                                </div>
-                            </div>
 
                             {/* Hover Glow Effect */}
                             <div

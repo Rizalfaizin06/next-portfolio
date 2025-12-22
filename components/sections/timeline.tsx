@@ -133,7 +133,7 @@ const experiences = [
         type: "Part Time • Onsite",
         title: "IT Support",
         company: "Universitas AKI",
-        color: "green",
+        color: "cyan",
         responsibilities: [
             "Pengelolaan jaringan & perangkat lab komputer",
             "Instalasi PC, printer, LCD/proyektor",
@@ -148,7 +148,7 @@ const experiences = [
         type: "Freelance • Hybrid",
         title: "IoT Engineer",
         company: "Masjid Al Banna",
-        color: "purple",
+        color: "green",
         responsibilities: [
             "Bangun sistem otomasi perangkat masjid",
             "Backend WebSocket + Express (real-time control)",
@@ -180,7 +180,7 @@ const additionalExperiences = [
         type: "Freelance • On Demand",
         title: "Freelance Web & IoT Consultant",
         company: "Berbagai Klien",
-        color: "orange",
+        color: "purple",
         responsibilities: [
             "Pembuatan dashboard IoT untuk institusi & UMKM",
             "Instalasi automation device (sensor + relay + scheduling)",
@@ -198,6 +198,14 @@ const colorConfig = {
         borderHover: "hover:border-blue-500/50",
         iconBg: "bg-blue-500/10",
         iconText: "text-blue-400",
+    },
+    cyan: {
+        dot: "bg-cyan-500",
+        shadow: "shadow-[0_0_16px_4px_rgba(6,182,212,0.5)]",
+        cardShadow: "hover:shadow-cyan-500/10",
+        borderHover: "hover:border-cyan-500/50",
+        iconBg: "bg-cyan-500/10",
+        iconText: "text-cyan-400",
     },
     green: {
         dot: "bg-green-500",
@@ -362,7 +370,13 @@ export function Timeline() {
 
                                             {/* Decorative Corner */}
                                             <div
-                                                className={`absolute top-0 right-0 w-16 h-16 ${colors.iconBg} rounded-bl-full opacity-0 group-hover:opacity-100 transition-opacity`}
+                                                className={`absolute top-0 ${
+                                                    isEven
+                                                        ? "left-0 rounded-br-full"
+                                                        : "right-0 rounded-bl-full"
+                                                } w-16 h-16 ${
+                                                    colors.iconBg
+                                                } opacity-0 group-hover:opacity-100 transition-opacity`}
                                             />
                                         </div>
                                     </div>
@@ -490,7 +504,13 @@ export function Timeline() {
 
                                                 {/* Decorative Corner */}
                                                 <div
-                                                    className={`absolute top-0 right-0 w-16 h-16 ${colors.iconBg} rounded-bl-full opacity-0 group-hover:opacity-100 transition-opacity`}
+                                                    className={`absolute top-0 ${
+                                                        isEven
+                                                            ? "left-0 rounded-br-full"
+                                                            : "right-0 rounded-bl-full"
+                                                    } w-16 h-16 ${
+                                                        colors.iconBg
+                                                    } opacity-0 group-hover:opacity-100 transition-opacity`}
                                                 />
                                             </div>
                                         </div>

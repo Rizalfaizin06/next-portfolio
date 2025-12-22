@@ -11,7 +11,7 @@ import {
     MobileNavMenu,
 } from "@/components/ui/resizable-navbar";
 import { useState } from "react";
-import { SpotlightContent } from "./spotlight";
+import { SpotlightContent } from "@/components/sections/spotlight";
 import { MainContent } from "./main-content";
 
 export function NavbarDemo() {
@@ -52,7 +52,7 @@ export function NavbarDemo() {
                     <NavbarLogo />
                     <NavItems items={navItems} />
                     <div className="flex items-center gap-4">
-                        <NavbarButton variant="secondary">Login</NavbarButton>
+                        {/* <NavbarButton variant="secondary">Login</NavbarButton> */}
                         <NavbarButton variant="primary">
                             Contact Me
                         </NavbarButton>
@@ -86,13 +86,13 @@ export function NavbarDemo() {
                             </a>
                         ))}
                         <div className="flex w-full flex-col gap-4">
-                            <NavbarButton
+                            {/* <NavbarButton
                                 onClick={() => setIsMobileMenuOpen(false)}
                                 variant="primary"
                                 className="w-full"
                             >
                                 Login
-                            </NavbarButton>
+                            </NavbarButton> */}
                             <NavbarButton
                                 onClick={() => setIsMobileMenuOpen(false)}
                                 variant="primary"
