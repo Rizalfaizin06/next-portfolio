@@ -24,10 +24,10 @@ export function NavbarDemo() {
             name: "About",
             link: "#about",
         },
-        {
-            name: "Skills",
-            link: "#skills",
-        },
+        // {
+        //     name: "Skills",
+        //     link: "#skills",
+        // },
         {
             name: "Projects",
             link: "#projects",

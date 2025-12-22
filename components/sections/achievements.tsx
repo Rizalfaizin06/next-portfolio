@@ -6,63 +6,83 @@ import { useState } from "react";
 const achievements = [
     {
         id: 1,
-        title: "Juara 1 Hackathon Nasional 2024",
+        title: "Wisudawan Terbaik",
         description:
-            "Memenangkan hackathon nasional dengan mengembangkan solusi AI untuk optimalisasi transportasi publik.",
-        year: "2024",
-        category: "Competition",
-        image: "https://images.unsplash.com/photo-1531545514256-b1400bc00f31?w=800&h=600&fit=crop",
-        award: "🥇 First Place",
+            "Meraih predikat Wisudawan Terbaik tingkat universitas berkat konsistensi pencapaian akademik, kontribusi aktif di organisasi, dan keterlibatan dalam kegiatan teknologi kampus.",
+        year: "2025",
+        category: "Award",
+        image: "https://images.unsplash.com/photo-1523050854058-8df90110c9f1?w=800&h=600&fit=crop",
+        award: "🏆 Best Graduate",
     },
     {
         id: 2,
-        title: "Best Mobile App Developer Award",
+        title: "Juara 1 IT Network System Administration",
         description:
-            "Penghargaan sebagai pengembang aplikasi mobile terbaik di ajang Developer Conference 2023.",
-        year: "2023",
-        category: "Award",
-        image: "https://images.unsplash.com/photo-1569705460033-cfaa4bf9f822?w=800&h=600&fit=crop",
-        award: "🏆 Winner",
+            "Juara 1 dalam lomba IT Network System Administrator dengan fokus pada konfigurasi server Linux dan Windows serta pengelolaan jaringan komputer.",
+        year: "2020",
+        category: "Competition",
+        image: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=800&h=600&fit=crop",
+        award: "🥇 First Place",
     },
     {
         id: 3,
-        title: "Google Developer Student Clubs Lead",
+        title: "Juara 1 Krenova Kab. Grobogan",
         description:
-            "Terpilih sebagai GDSC Lead untuk memimpin komunitas developer di kampus.",
+            "Juara 1 Krenova (Kreativitas dan Inovasi) dengan proyek Student Financial Management - sistem IoT untuk pengelolaan keuangan siswa menggunakan kartu OSIS.",
         year: "2023",
-        category: "Leadership",
-        image: "https://images.unsplash.com/photo-1511578314322-379afb476865?w=800&h=600&fit=crop",
-        award: "👨‍💼 Lead",
+        category: "Competition",
+        image: "https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=800&h=600&fit=crop",
+        award: "🥇 First Place",
     },
     {
         id: 4,
-        title: "Juara 2 Web Development Competition",
+        title: "Juara Harapan 1 Krenova Prov. Jateng",
         description:
-            "Runner-up dalam kompetisi pengembangan web dengan tema e-commerce solution.",
-        year: "2023",
+            "Juara Harapan 1 Krenova tingkat Provinsi Jawa Tengah dengan proyek Smart Thermometer and Record untuk penunjang Smart Library di SMK Negeri 1 Wirosari.",
+        year: "2022",
         category: "Competition",
-        image: "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?w=800&h=600&fit=crop",
-        award: "🥈 Second Place",
+        image: "https://images.unsplash.com/photo-1481627834876-b7833e8f5570?w=800&h=600&fit=crop",
+        award: "🥉 3rd Best",
     },
     {
         id: 5,
-        title: "AWS Certified Solutions Architect",
+        title: "Youth Leaders - Unified Champion School",
         description:
-            "Mendapatkan sertifikasi sebagai AWS Solutions Architect - Associate Level.",
+            "Penghargaan sebagai Youth Leader dalam program Unified Champion School yang diselenggarakan oleh Special Olympics Indonesia Provinsi Jawa Tengah.",
         year: "2024",
-        category: "Certification",
-        image: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=800&h=600&fit=crop",
-        award: "📜 Certified",
+        category: "Leadership",
+        image: "https://images.unsplash.com/photo-1511578314322-379afb476865?w=800&h=600&fit=crop",
+        award: "👨‍💼 Youth Leader",
     },
     {
         id: 6,
-        title: "Top Contributor Open Source Project",
+        title: "Bangkit Academy Graduate",
         description:
-            "Kontributor aktif dan masuk top 10 contributors di project open source populer.",
+            "Menyelesaikan program Bangkit Academy led by Google, Tokopedia, Gojek, & Traveloka dalam jalur Android Development dengan menyelesaikan seluruh modul teknis dan soft skill.",
         year: "2024",
-        category: "Open Source",
-        image: "https://images.unsplash.com/photo-1556761175-b413da4baf72?w=800&h=600&fit=crop",
-        award: "⭐ Top 10",
+        category: "Certification",
+        image: "https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=800&h=600&fit=crop",
+        award: "📜 Graduate",
+    },
+    {
+        id: 7,
+        title: "MTCNA - MikroTik Certified",
+        description:
+            "Mendapatkan sertifikasi MikroTik Certified Network Associate (MTCNA) untuk keahlian dalam konfigurasi dan manajemen jaringan menggunakan MikroTik RouterOS.",
+        year: "2020",
+        category: "Certification",
+        image: "https://images.unsplash.com/photo-1544197150-b99a580bb7a8?w=800&h=600&fit=crop",
+        award: "📜 Certified",
+    },
+    {
+        id: 8,
+        title: "CCNA Certified",
+        description:
+            "Menyelesaikan CCNAv7: Introduction to Networks dan CCNA: Switching, Routing, and Wireless Essentials dari Cisco Networking Academy.",
+        year: "2023-2025",
+        category: "Certification",
+        image: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=800&h=600&fit=crop",
+        award: "📜 Certified",
     },
 ];
 
@@ -72,7 +92,6 @@ const categories = [
     "Award",
     "Leadership",
     "Certification",
-    "Open Source",
 ];
 
 export function Achievements() {

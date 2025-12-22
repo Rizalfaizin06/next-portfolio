@@ -12,23 +12,25 @@ const skills = [
 ];
 
 const stats = [
-    { label: "Years Experience", value: "3+" },
-    { label: "Projects Completed", value: "25+" },
-    { label: "Happy Clients", value: "15+" },
-    { label: "Technologies", value: "10+" },
+    { label: "Years Experience", value: "4+" },
+    { label: "Projects Completed", value: "17+" },
+    { label: "Certifications", value: "5" },
+    { label: "Tech Stack", value: "30+" },
 ];
 
 const techStack = [
-    { name: "React", icon: "/images/react.svg" },
+    { name: "Laravel", icon: "/images/laravel.svg" },
     { name: "Next.js", icon: "/images/nextjs.svg" },
-    { name: "TypeScript", icon: "/images/typescript.svg" },
+    { name: "React", icon: "/images/react.svg" },
     { name: "Node.js", icon: "/images/nodejs.svg" },
+    { name: "Express", icon: "/images/express.svg" },
     { name: "Tailwind CSS", icon: "/images/tailwind.svg" },
     { name: "PostgreSQL", icon: "/images/postgresql.svg" },
-    { name: "MongoDB", icon: "/images/mongodb.svg" },
+    { name: "MySQL", icon: "/images/mysql.svg" },
     { name: "Docker", icon: "/images/docker.svg" },
     { name: "Git", icon: "/images/git.svg" },
-    { name: "AWS", icon: "/images/aws.svg" },
+    { name: "Arduino", icon: "/images/arduino.svg" },
+    { name: "Mikrotik", icon: "/images/mikrotik.svg" },
 ];
 
 function TechStackScroll({ techStack }: { techStack: typeof techStack }) {
@@ -168,18 +170,20 @@ export function AboutMe() {
                         <p className="text-xl md:text-2xl leading-relaxed">
                             Halo! Saya adalah seorang{" "}
                             <span className="text-white font-semibold">
-                                Full Stack Developer
+                                Web Developer dan IT Specialist
                             </span>{" "}
-                            yang bersemangat dalam menciptakan pengalaman
-                            digital yang luar biasa. Dengan fokus pada kualitas
-                            kode dan user experience yang optimal.
+                            dengan pengalaman di Fullstack Development, IT
+                            Support, IoT, Network Engineering, dan IT
+                            Infrastructure.
                         </p>
                         <p className="text-base md:text-lg leading-relaxed">
-                            Saya percaya bahwa teknologi yang baik adalah yang
-                            tidak terlihat — bekerja dengan mulus di latar
-                            belakang sambil memberikan pengalaman yang intuitif
-                            bagi pengguna. Setiap proyek adalah kesempatan untuk
-                            belajar dan berkembang.
+                            Saya terbiasa membangun aplikasi menggunakan React,
+                            Next.js, Node.js, Laravel, dan Express, serta
+                            mengembangkan solusi IoT berbasis real-time socket.
+                            Selain itu, saya berpengalaman menangani
+                            infrastruktur TI kampus dan sekolah, mulai dari
+                            troubleshooting hardware dan software, jaringan,
+                            hingga server.
                         </p>
                     </motion.div>
                 </div>
@@ -226,22 +230,22 @@ export function AboutMe() {
                         {
                             icon: "🌐",
                             title: "Web Development",
-                            desc: "Aplikasi web modern & responsif",
+                            desc: "Fullstack & Backend Development",
                         },
                         {
                             icon: "📱",
                             title: "Mobile Apps",
-                            desc: "iOS & Android development",
+                            desc: "Flutter & Android Development",
                         },
                         {
-                            icon: "💾",
-                            title: "IT Insfrastructure",
-                            desc: "Desain yang user-friendly",
+                            icon: "🔌",
+                            title: "IoT Engineering",
+                            desc: "Real-time control & automation",
                         },
                         {
-                            icon: "⚡",
-                            title: "IoT Development",
-                            desc: "Optimasi & skalabilitas",
+                            icon: "🌐",
+                            title: "Network & Infrastructure",
+                            desc: "Mikrotik, Cisco & System Admin",
                         },
                     ].map((item, index) => (
                         <motion.div

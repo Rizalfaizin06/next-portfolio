@@ -120,11 +120,11 @@ const experiences = [
         company: "PT. Bejana Investidata Globalindo",
         color: "blue",
         responsibilities: [
-            "Membangun REST API (Node.js + Express)",
-            "Dokumentasi API menggunakan Swagger",
-            "Caching data dengan Redis untuk meningkatkan performa",
-            "Testing API (Jest + Supertest)",
-            "Kolaborasi lintas tim (Frontend & QA)",
+            "Merancang dan membangun berbagai endpoint API untuk kebutuhan fitur dan integrasi",
+            "Mengembangkan logika backend menggunakan JavaScript/Node.js",
+            "Melakukan pengujian API menggunakan Jest & Supertest untuk menjaga stabilitas layanan",
+            "Berkolaborasi dengan tim frontend dan QA untuk sinkronisasi fitur",
+            "Mengimplementasikan Redis sebagai mekanisme caching untuk meningkatkan performa",
         ],
     },
     {
@@ -135,11 +135,11 @@ const experiences = [
         company: "Universitas AKI",
         color: "cyan",
         responsibilities: [
-            "Pengelolaan jaringan & perangkat lab komputer",
-            "Instalasi PC, printer, LCD/proyektor",
-            "Mendukung pengembangan & deployment web internal",
-            "Menangani tiket IT & training singkat user",
-            "Menjamin layanan TI tetap stabil & efisien",
+            "Mengelola dan memelihara jaringan di seluruh gedung kampus",
+            "Instalasi, konfigurasi, dan troubleshooting komputer, laptop, printer, LCD/proyektor",
+            "Mengelola operasional dan kesiapan perangkat di Lab Komputer",
+            "Membuat dan memelihara sistem atau aplikasi berbasis web sesuai kebutuhan kampus",
+            "Menerapkan sistem load balance jaringan dan NetSupport untuk kontrol Lab Komputer",
         ],
     },
     {
@@ -150,11 +150,11 @@ const experiences = [
         company: "Masjid Al Banna",
         color: "green",
         responsibilities: [
-            "Bangun sistem otomasi perangkat masjid",
-            "Backend WebSocket + Express (real-time control)",
-            "Dashboard React: remote, manual, scheduling",
-            "Instalasi perangkat IoT & troubleshooting hardware",
-            "Optimasi daya listrik melalui automation scheduling",
+            "Mendesain arsitektur IoT untuk kontrol perangkat elektronik masjid (lampu, AC, kipas)",
+            "Mengembangkan backend menggunakan Express + WebSocket untuk komunikasi real-time",
+            "Membangun antarmuka kontrol berbasis React dengan fitur manual, remote, dan scheduling",
+            "Melakukan instalasi perangkat IoT, wiring, modul relay, serta integrasi sistem",
+            "Sistem IoT berjalan stabil bertahun-tahun dengan maintenance minimal",
         ],
     },
 ];
@@ -162,30 +162,32 @@ const experiences = [
 const additionalExperiences = [
     {
         id: 4,
-        period: "2020 – Sekarang",
-        type: "Freelance • On Demand",
-        title: "Freelance Web & IoT Consultant",
-        company: "Berbagai Klien",
-        color: "orange",
+        period: "Juli 2025 – Sekarang",
+        type: "Freelance • Hybrid",
+        title: "Multimedia Project Manager",
+        company: "Luckystar Wedding & Event Organizer",
+        color: "purple",
         responsibilities: [
-            "Pembuatan dashboard IoT untuk institusi & UMKM",
-            "Instalasi automation device (sensor + relay + scheduling)",
-            "Custom API untuk integrasi IoT ke sistem internal/website",
-            "Optimasi arsitektur backend (Node.js, database, WebSocket)",
+            "Mengelola kebutuhan multimedia acara dari pra-produksi hingga eksekusi",
+            "Membuat dan mengelola aset multimedia (visual cue, bumper video, overlay, slide)",
+            "Setup dan operasional perangkat multimedia (proyektor, LED wall, kamera live, switcher)",
+            "Berkoordinasi dengan wedding organizer, vendor, dan crew untuk flow multimedia",
+            "Berhasil mengeksekusi banyak event dengan multimedia yang stabil dan minim downtime",
         ],
     },
     {
-        id: 4,
-        period: "2020 – Sekarang",
-        type: "Freelance • On Demand",
-        title: "Freelance Web & IoT Consultant",
-        company: "Berbagai Klien",
-        color: "purple",
+        id: 5,
+        period: "Mei 2021 – Sekarang",
+        type: "Freelance • Hybrid",
+        title: "Network Engineer",
+        company: "SDIT Muhammadiyah Wirosari",
+        color: "orange",
         responsibilities: [
-            "Pembuatan dashboard IoT untuk institusi & UMKM",
-            "Instalasi automation device (sensor + relay + scheduling)",
-            "Custom API untuk integrasi IoT ke sistem internal/website",
-            "Optimasi arsitektur backend (Node.js, database, WebSocket)",
+            "Mendesain arsitektur jaringan untuk seluruh area sekolah",
+            "Instalasi, konfigurasi, dan pemeliharaan Router dan access point",
+            "Membuat segmentasi jaringan untuk Admin, Guru, Siswa, dan Tamu",
+            "Mengimplementasikan manajemen jaringan (firewall, routing, DHCP, QoS)",
+            "Meningkatkan keandalan dan keamanan jaringan sekolah secara signifikan",
         ],
     },
 ];
@@ -304,7 +306,7 @@ export function Timeline() {
                                     <div
                                         className={`w-full md:w-[calc(50%-2rem)] ${
                                             isEven
-                                                ? "md:text-right"
+                                                ? "md:text-left"
                                                 : "md:text-left"
                                         } text-left`}
                                     >
@@ -349,7 +351,7 @@ export function Timeline() {
                                             <ul
                                                 className={`space-y-2 text-neutral-300 text-sm ${
                                                     isEven
-                                                        ? "md:text-right"
+                                                        ? "md:text-left"
                                                         : "md:text-left"
                                                 } text-left`}
                                             >
@@ -436,7 +438,7 @@ export function Timeline() {
                                         <div
                                             className={`w-full md:w-[calc(50%-2rem)] ${
                                                 isEven
-                                                    ? "md:text-right"
+                                                    ? "md:text-left"
                                                     : "md:text-left"
                                             } text-left`}
                                         >
@@ -481,7 +483,7 @@ export function Timeline() {
                                                 <ul
                                                     className={`space-y-2 text-neutral-300 text-sm ${
                                                         isEven
-                                                            ? "md:text-right"
+                                                            ? "md:text-left"
                                                             : "md:text-left"
                                                     } text-left`}
                                                 >
