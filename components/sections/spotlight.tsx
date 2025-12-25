@@ -1,25 +1,28 @@
 "use client";
 import { Spotlight } from "@/components/ui/spotlight-new";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 export function SpotlightContent() {
+    const { t } = useLanguage();
+
     return (
         <div
             id="home"
-            className="h-[50rem] -mt-14 w-full rounded-md flex md:items-center md:justify-center bg-black/[0.96] antialiased bg-grid-white/[0.02] relative overflow-hidden"
+            className="h-[50rem] -mt-14 w-full rounded-md flex md:items-center md:justify-center bg-black/[0.96] antialiased bg-grid-white/[0.02] relative overflow-hidden max-w-full"
         >
             <Spotlight />
-            <div className=" p-4 max-w-7xl mx-auto relative z-10  w-full pt-20 md:pt-0">
+            <div className="p-4 max-w-7xl mx-auto relative z-10 w-full pt-20 md:pt-0">
                 <p className="mt-4 font-thin text-neutral-300 max-w-lg text-center mx-auto pb-10 text-2xl">
-                    Let me Introduce myself
+                    {t("spotlight.intro")}
                 </p>
                 <h1 className="text-4xl md:text-7xl font-bold text-center bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-200 bg-opacity-50 pb-5">
-                    Hi, I’m Rizal, Developer
+                    {t("spotlight.greeting")}
                 </h1>
+                <p className="mt-2 text-2xl md:text-3xl font-semibold text-center text-blue-400">
+                    {t("spotlight.role")}
+                </p>
                 <p className="mt-4 font-normal text-lg text-neutral-500 max-w-xl text-center mx-auto">
-                    Berpengalaman di Fullstack Development, IT Support, IoT,
-                    Network Engineering, dan IT Infrastructure. Fokus
-                    menciptakan solusi yang stabil, efisien, dan mudah
-                    diimplementasikan di lapangan.
+                    {t("spotlight.description")}
                 </p>
 
                 {/* CTA Buttons */}
@@ -28,8 +31,8 @@ export function SpotlightContent() {
                         href="#contact"
                         className="group relative inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-blue-600/50 to-blue-400 text-white font-semibold rounded-full hover:shadow-lg hover:shadow-blue-500/50 transition-all hover:scale-105"
                     >
-                        <span>Contact Me</span>
-                        <svg
+                        <span>{t("nav.contact")}</span>
+                        {/* <svg
                             className="w-5 h-5 group-hover:translate-x-1 transition-transform"
                             fill="none"
                             stroke="currentColor"
@@ -41,14 +44,14 @@ export function SpotlightContent() {
                                 strokeWidth={2}
                                 d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
                             />
-                        </svg>
+                        </svg> */}
                     </a>
 
                     <a
                         href="#projects"
                         className="group inline-flex items-center gap-2 px-8 py-4 bg-transparent text-white font-semibold rounded-full border-2 border-white/20 hover:border-blue-500 hover:bg-white/5 transition-all"
                     >
-                        <span>View Projects</span>
+                        <span>{t("nav.projects")}</span>
                         <svg
                             className="w-5 h-5 group-hover:translate-y-1 transition-transform"
                             fill="none"

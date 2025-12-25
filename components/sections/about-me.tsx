@@ -1,6 +1,7 @@
 "use client";
 import { motion, useMotionValue, useAnimationFrame } from "framer-motion";
 import { useState, useRef } from "react";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const skills = [
     { name: "React / Next.js", level: 90 },
@@ -11,11 +12,34 @@ const skills = [
     { name: "Mobile Development", level: 70 },
 ];
 
-const stats = [
-    { label: "Years Experience", value: "4+" },
-    { label: "Projects Completed", value: "17+" },
-    { label: "Certifications", value: "5" },
-    { label: "Tech Stack", value: "30+" },
+const getStats = (t: (key: string) => string) => [
+    { label: `${t("about.years")} ${t("about.experience")}`, value: "4+" },
+    { label: `${t("about.projects")} ${t("about.completed")}`, value: "17+" },
+    { label: t("about.certifications"), value: "5" },
+    { label: `${t("about.techStack")} ${t("about.mastered")}`, value: "30+" },
+];
+
+const getWhatIDo = (t: (key: string) => string) => [
+    {
+        icon: "🌐",
+        title: t("about.webDev.title"),
+        desc: t("about.webDev.desc"),
+    },
+    {
+        icon: "📱",
+        title: t("about.mobile.title"),
+        desc: t("about.mobile.desc"),
+    },
+    {
+        icon: "🔌",
+        title: t("about.iot.title"),
+        desc: t("about.iot.desc"),
+    },
+    {
+        icon: "🌐",
+        title: t("about.network.title"),
+        desc: t("about.network.desc"),
+    },
 ];
 
 const techStack = [
@@ -114,22 +138,26 @@ function TechStackScroll({ techStack }: { techStack: typeof techStack }) {
 }
 
 export function AboutMe() {
+    const { t } = useLanguage();
+    const stats = getStats(t);
+    const whatIDo = getWhatIDo(t);
+
     return (
         <section
             id="about"
             className="relative py-20 px-4 md:px-8 bg-gradient-to-b from-black/[0.96] to-neutral-950"
         >
-            <div className="max-w-6xl mx-auto">
+            <div className="max-w-7xl mx-auto relative z-10">
                 {/* Section Header */}
                 <motion.div
-                    initial={{ opacity: 0, y: 20 }}
+                    initial={{ opacity: 0, y: -20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.6 }}
                     viewport={{ once: true }}
                     className="text-center mb-16"
                 >
                     <h2 className="text-sm font-semibold text-blue-400 uppercase tracking-widest mb-3">
-                        About Me
+                        {t("about.bio.title")}
                     </h2>
                     <h3 className="text-3xl md:text-5xl font-bold text-white mb-4">
                         Passionate Developer &{" "}
@@ -150,9 +178,13 @@ export function AboutMe() {
                         viewport={{ once: true }}
                         className="relative"
                     >
-                        {/* Profile Image Placeholder */}
+                        {/* Profile Image */}
                         <div className="w-64 h-64 md:w-80 md:h-80 rounded-2xl bg-gradient-to-br from-blue-500/20 to-blue-300/20 border border-white/10 backdrop-blur-sm flex items-center justify-center overflow-hidden">
-                            <div className="text-7xl md:text-9xl">👨‍💻</div>
+                            <img
+                                src="/images/avatar/rizal-square.jpg"
+                                alt="Rizal Profile"
+                                className="w-full h-full object-cover"
+                            />
                         </div>
                         {/* Decorative Elements */}
                         <div className="absolute -top-4 -right-4 w-24 h-24 bg-blue-500/10 rounded-full blur-xl" />
@@ -168,22 +200,10 @@ export function AboutMe() {
                         className="text-neutral-300 space-y-6"
                     >
                         <p className="text-xl md:text-2xl leading-relaxed">
-                            Halo! Saya adalah seorang{" "}
-                            <span className="text-white font-semibold">
-                                Web Developer dan IT Specialist
-                            </span>{" "}
-                            dengan pengalaman di Fullstack Development, IT
-                            Support, IoT, Network Engineering, dan IT
-                            Infrastructure.
+                            {t("about.bio.paragraph1")}
                         </p>
                         <p className="text-base md:text-lg leading-relaxed">
-                            Saya terbiasa membangun aplikasi menggunakan React,
-                            Next.js, Node.js, Laravel, dan Express, serta
-                            mengembangkan solusi IoT berbasis real-time socket.
-                            Selain itu, saya berpengalaman menangani
-                            infrastruktur TI kampus dan sekolah, mulai dari
-                            troubleshooting hardware dan software, jaringan,
-                            hingga server.
+                            {t("about.bio.paragraph2")}
                         </p>
                     </motion.div>
                 </div>
@@ -226,28 +246,7 @@ export function AboutMe() {
                     viewport={{ once: true }}
                     className="grid grid-cols-2 md:grid-cols-4 gap-6"
                 >
-                    {[
-                        {
-                            icon: "🌐",
-                            title: "Web Development",
-                            desc: "Fullstack & Backend Development",
-                        },
-                        {
-                            icon: "📱",
-                            title: "Mobile Apps",
-                            desc: "Flutter & Android Development",
-                        },
-                        {
-                            icon: "🔌",
-                            title: "IoT Engineering",
-                            desc: "Real-time control & automation",
-                        },
-                        {
-                            icon: "🌐",
-                            title: "Network & Infrastructure",
-                            desc: "Mikrotik, Cisco & System Admin",
-                        },
-                    ].map((item, index) => (
+                    {whatIDo.map((item, index) => (
                         <motion.div
                             key={item.title}
                             initial={{ opacity: 0, scale: 0.9 }}

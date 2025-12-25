@@ -9,7 +9,7 @@ import { Timeline } from "@/components/sections/timeline";
 
 export function MainContent() {
     return (
-        <div>
+        <div className="overflow-x-hidden w-full">
             <SpotlightContent />
             <AboutMe />
             {/* <TechStack /> */}

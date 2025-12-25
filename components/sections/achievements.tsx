@@ -2,6 +2,7 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 import { useState } from "react";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const achievements = [
     {
@@ -95,6 +96,7 @@ const categories = [
 ];
 
 export function Achievements() {
+    const { t } = useLanguage();
     const [activeCategory, setActiveCategory] = useState("All");
     const [selectedImage, setSelectedImage] = useState<string | null>(null);
 
@@ -121,10 +123,7 @@ export function Achievements() {
                         Achievements
                     </h2>
                     <h3 className="text-3xl md:text-5xl font-bold text-white mb-4">
-                        Awards &{" "}
-                        <span className="bg-gradient-to-r from-yellow-400 to-orange-500 bg-clip-text text-transparent">
-                            Recognition
-                        </span>
+                        {t("achievements.title")}
                     </h3>
                     <p className="text-neutral-400 max-w-2xl mx-auto">
                         Beberapa penghargaan dan pencapaian yang telah saya raih
@@ -141,19 +140,24 @@ export function Achievements() {
                     viewport={{ once: true }}
                     className="flex flex-wrap justify-center gap-3 mb-12"
                 >
-                    {categories.map((category) => (
-                        <button
-                            key={category}
-                            onClick={() => setActiveCategory(category)}
-                            className={`px-5 py-2 rounded-full text-sm font-medium transition-all duration-300 ${
-                                activeCategory === category
-                                    ? "bg-gradient-to-r from-yellow-500 to-orange-500 text-white shadow-lg shadow-yellow-500/25"
-                                    : "bg-white/5 text-neutral-400 hover:bg-white/10 hover:text-white border border-white/10"
-                            }`}
-                        >
-                            {category}
-                        </button>
-                    ))}
+                    {categories.map((category) => {
+                        const translationKey = `achievements.filter.${category
+                            .toLowerCase()
+                            .replace(" ", "")}` as any;
+                        return (
+                            <button
+                                key={category}
+                                onClick={() => setActiveCategory(category)}
+                                className={`px-6 py-2 rounded-full font-medium transition-all ${
+                                    activeCategory === category
+                                        ? "bg-gradient-to-r from-yellow-500 to-orange-500 text-white shadow-lg shadow-yellow-500/30"
+                                        : "bg-white/5 text-neutral-300 hover:bg-white/10 border border-white/10"
+                                }`}
+                            >
+                                {t(translationKey)}
+                            </button>
+                        );
+                    })}
                 </motion.div>
 
                 {/* Achievements Grid */}

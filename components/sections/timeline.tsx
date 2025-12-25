@@ -110,87 +110,8 @@
 "use client";
 import { motion } from "framer-motion";
 import { useState } from "react";
-
-const experiences = [
-    {
-        id: 1,
-        period: "Februari 2024 – Agustus 2024",
-        type: "Full Time • Onsite",
-        title: "Fullstack Developer Intern",
-        company: "PT. Bejana Investidata Globalindo",
-        color: "blue",
-        responsibilities: [
-            "Merancang dan membangun berbagai endpoint API untuk kebutuhan fitur dan integrasi",
-            "Mengembangkan logika backend menggunakan JavaScript/Node.js",
-            "Melakukan pengujian API menggunakan Jest & Supertest untuk menjaga stabilitas layanan",
-            "Berkolaborasi dengan tim frontend dan QA untuk sinkronisasi fitur",
-            "Mengimplementasikan Redis sebagai mekanisme caching untuk meningkatkan performa",
-        ],
-    },
-    {
-        id: 2,
-        period: "Maret 2023 – November 2025",
-        type: "Part Time • Onsite",
-        title: "IT Support",
-        company: "Universitas AKI",
-        color: "cyan",
-        responsibilities: [
-            "Mengelola dan memelihara jaringan di seluruh gedung kampus",
-            "Instalasi, konfigurasi, dan troubleshooting komputer, laptop, printer, LCD/proyektor",
-            "Mengelola operasional dan kesiapan perangkat di Lab Komputer",
-            "Membuat dan memelihara sistem atau aplikasi berbasis web sesuai kebutuhan kampus",
-            "Menerapkan sistem load balance jaringan dan NetSupport untuk kontrol Lab Komputer",
-        ],
-    },
-    {
-        id: 3,
-        period: "Oktober 2021 – Sekarang",
-        type: "Freelance • Hybrid",
-        title: "IoT Engineer",
-        company: "Masjid Al Banna",
-        color: "green",
-        responsibilities: [
-            "Mendesain arsitektur IoT untuk kontrol perangkat elektronik masjid (lampu, AC, kipas)",
-            "Mengembangkan backend menggunakan Express + WebSocket untuk komunikasi real-time",
-            "Membangun antarmuka kontrol berbasis React dengan fitur manual, remote, dan scheduling",
-            "Melakukan instalasi perangkat IoT, wiring, modul relay, serta integrasi sistem",
-            "Sistem IoT berjalan stabil bertahun-tahun dengan maintenance minimal",
-        ],
-    },
-];
-
-const additionalExperiences = [
-    {
-        id: 4,
-        period: "Juli 2025 – Sekarang",
-        type: "Freelance • Hybrid",
-        title: "Multimedia Project Manager",
-        company: "Luckystar Wedding & Event Organizer",
-        color: "purple",
-        responsibilities: [
-            "Mengelola kebutuhan multimedia acara dari pra-produksi hingga eksekusi",
-            "Membuat dan mengelola aset multimedia (visual cue, bumper video, overlay, slide)",
-            "Setup dan operasional perangkat multimedia (proyektor, LED wall, kamera live, switcher)",
-            "Berkoordinasi dengan wedding organizer, vendor, dan crew untuk flow multimedia",
-            "Berhasil mengeksekusi banyak event dengan multimedia yang stabil dan minim downtime",
-        ],
-    },
-    {
-        id: 5,
-        period: "Mei 2021 – Sekarang",
-        type: "Freelance • Hybrid",
-        title: "Network Engineer",
-        company: "SDIT Muhammadiyah Wirosari",
-        color: "orange",
-        responsibilities: [
-            "Mendesain arsitektur jaringan untuk seluruh area sekolah",
-            "Instalasi, konfigurasi, dan pemeliharaan Router dan access point",
-            "Membuat segmentasi jaringan untuk Admin, Guru, Siswa, dan Tamu",
-            "Mengimplementasikan manajemen jaringan (firewall, routing, DHCP, QoS)",
-            "Meningkatkan keandalan dan keamanan jaringan sekolah secara signifikan",
-        ],
-    },
-];
+import { useLanguage } from "@/contexts/LanguageContext";
+import { timelineTranslations } from "@/locales/timeline-data";
 
 const colorConfig = {
     blue: {
@@ -237,6 +158,12 @@ const colorConfig = {
 
 export function Timeline() {
     const [showMore, setShowMore] = useState(false);
+    const { t, language } = useLanguage();
+
+    const experiences = timelineTranslations[language].experiences;
+    const additionalExperiences =
+        timelineTranslations[language].additionalExperiences;
+
     return (
         <section
             id="experience"
@@ -255,16 +182,8 @@ export function Timeline() {
                         Career Journey
                     </h2>
                     <h3 className="text-3xl md:text-5xl font-bold text-white mb-4">
-                        Professional{" "}
-                        <span className="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
-                            Experience
-                        </span>
+                        {t("timeline.title")}
                     </h3>
-                    <p className="text-neutral-400 max-w-2xl mx-auto">
-                        Perjalanan profesional saya dalam dunia teknologi dan
-                        pengembangan perangkat lunak.
-                    </p>
-                    <div className="w-20 h-1 bg-gradient-to-r from-cyan-500 to-blue-500 mx-auto rounded-full mt-6" />
                 </motion.div>
 
                 {/* Timeline */}
@@ -541,7 +460,9 @@ export function Timeline() {
                             className="relative z-20 px-6 py-3 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 border border-cyan-500/30 text-cyan-400 font-semibold rounded-full hover:from-cyan-500/30 hover:to-blue-500/30 hover:border-cyan-400 transition-all backdrop-blur-sm"
                         >
                             <span className="flex items-center gap-2">
-                                {showMore ? "Show Less" : "Show More"}
+                                {showMore
+                                    ? t("timeline.viewLess")
+                                    : t("timeline.viewMore")}
                                 <svg
                                     className={`w-4 h-4 transition-transform duration-300 ${
                                         showMore ? "rotate-180" : ""
