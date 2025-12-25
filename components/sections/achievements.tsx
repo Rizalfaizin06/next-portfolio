@@ -12,7 +12,7 @@ const achievements = [
             "Meraih predikat Wisudawan Terbaik tingkat universitas berkat konsistensi pencapaian akademik, kontribusi aktif di organisasi, dan keterlibatan dalam kegiatan teknologi kampus.",
         year: "2025",
         category: "Award",
-        image: "https://images.unsplash.com/photo-1523050854058-8df90110c9f1?w=800&h=600&fit=crop",
+        image: "/images/awards/wisudawan-terbaik.png",
         award: "🏆 Best Graduate",
     },
     {
@@ -22,7 +22,7 @@ const achievements = [
             "Juara 1 dalam lomba IT Network System Administrator dengan fokus pada konfigurasi server Linux dan Windows serta pengelolaan jaringan komputer.",
         year: "2020",
         category: "Competition",
-        image: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=800&h=600&fit=crop",
+        image: "/images/awards/it-nsa.png",
         award: "🥇 First Place",
     },
     {
@@ -32,7 +32,7 @@ const achievements = [
             "Juara 1 Krenova (Kreativitas dan Inovasi) dengan proyek Student Financial Management - sistem IoT untuk pengelolaan keuangan siswa menggunakan kartu OSIS.",
         year: "2023",
         category: "Competition",
-        image: "https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=800&h=600&fit=crop",
+        image: "/images/awards/krenova-2023.png",
         award: "🥇 First Place",
     },
     {
@@ -42,27 +42,37 @@ const achievements = [
             "Juara Harapan 1 Krenova tingkat Provinsi Jawa Tengah dengan proyek Smart Thermometer and Record untuk penunjang Smart Library di SMK Negeri 1 Wirosari.",
         year: "2022",
         category: "Competition",
-        image: "https://images.unsplash.com/photo-1481627834876-b7833e8f5570?w=800&h=600&fit=crop",
-        award: "🥉 3rd Best",
+        image: "/images/awards/krenova-2022.png",
+        award: "🏆 Harapan Terbaik",
     },
     {
-        id: 5,
-        title: "Youth Leaders - Unified Champion School",
+        id: 10,
+        title: "Juara 3 Krenova Kab. Grobogan",
         description:
-            "Penghargaan sebagai Youth Leader dalam program Unified Champion School yang diselenggarakan oleh Special Olympics Indonesia Provinsi Jawa Tengah.",
-        year: "2024",
-        category: "Leadership",
-        image: "https://images.unsplash.com/photo-1511578314322-379afb476865?w=800&h=600&fit=crop",
-        award: "👨‍💼 Youth Leader",
+            "Juara 3 Krenova tingkat Kabupaten Grobogan dengan proyek Smart Thermometer and Record untuk penunjang Smart Library di SMK Negeri 1 Wirosari.",
+        year: "2021",
+        category: "Competition",
+        image: "/images/awards/krenova-2021.png",
+        award: "🥉 3rd Best",
     },
+    // {
+    //     id: 5,
+    //     title: "Youth Leaders - Unified Champion School",
+    //     description:
+    //         "Penghargaan sebagai Youth Leader dalam program Unified Champion School yang diselenggarakan oleh Special Olympics Indonesia Provinsi Jawa Tengah.",
+    //     year: "2024",
+    //     category: "Leadership",
+    //     image: "https://images.unsplash.com/photo-1511578314322-379afb476865?w=800&h=600&fit=crop",
+    //     award: "👨‍💼 Youth Leader",
+    // },
     {
         id: 6,
         title: "Bangkit Academy Graduate",
         description:
-            "Menyelesaikan program Bangkit Academy led by Google, Tokopedia, Gojek, & Traveloka dalam jalur Android Development dengan menyelesaikan seluruh modul teknis dan soft skill.",
+            "Menyelesaikan program Bangkit Academy led by Google, Tokopedia, Gojek, & Traveloka dalam jalur Android Development dengan menyelesaikan seluruh modul.",
         year: "2024",
         category: "Certification",
-        image: "https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=800&h=600&fit=crop",
+        image: "/images/awards/bangkit-academy.png",
         award: "📜 Graduate",
     },
     {
@@ -72,28 +82,32 @@ const achievements = [
             "Mendapatkan sertifikasi MikroTik Certified Network Associate (MTCNA) untuk keahlian dalam konfigurasi dan manajemen jaringan menggunakan MikroTik RouterOS.",
         year: "2020",
         category: "Certification",
-        image: "https://images.unsplash.com/photo-1544197150-b99a580bb7a8?w=800&h=600&fit=crop",
+        image: "/images/awards/mtcna.png",
         award: "📜 Certified",
     },
     {
         id: 8,
-        title: "CCNA Certified",
+        title: "CCNA - Introduction to Networks",
         description:
-            "Menyelesaikan CCNAv7: Introduction to Networks dan CCNA: Switching, Routing, and Wireless Essentials dari Cisco Networking Academy.",
+            "Menyelesaikan CCNAv7: Introduction to Networks dari Cisco Networking Academy.",
         year: "2023-2025",
         category: "Certification",
-        image: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=800&h=600&fit=crop",
+        image: "/images/awards/ccna-v7.png",
+        award: "📜 Certified",
+    },
+    {
+        id: 9,
+        title: "CCNA - Switching, Routing, and Wireless Essentials",
+        description:
+            "Menyelesaikan  CCNA: Switching, Routing, and Wireless Essentials dari Cisco Networking Academy.",
+        year: "2023-2025",
+        category: "Certification",
+        image: "/images/awards/ccna-switching.png",
         award: "📜 Certified",
     },
 ];
 
-const categories = [
-    "All",
-    "Competition",
-    "Award",
-    "Leadership",
-    "Certification",
-];
+const categories = ["All", "Award", "Competition", "Certification"];
 
 export function Achievements() {
     const { t } = useLanguage();
@@ -255,9 +269,9 @@ export function Achievements() {
                     className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-16 pt-16 border-t border-white/10"
                 >
                     {[
-                        { label: "Total Awards", value: "12+", icon: "🏆" },
-                        { label: "Competitions Won", value: "8", icon: "🥇" },
-                        { label: "Certifications", value: "5", icon: "📜" },
+                        { label: "Total Awards", value: "6", icon: "🏆" },
+                        { label: "Competitions Won", value: "4", icon: "🥇" },
+                        { label: "Certifications", value: "3", icon: "📜" },
                         { label: "Recognition", value: "15+", icon: "⭐" },
                     ].map((stat, index) => (
                         <motion.div

@@ -34,7 +34,7 @@ export const timelineTranslations = {
             },
             {
                 id: 3,
-                period: "Oktober 2021 – Sekarang",
+                period: "Oktober 2021 – Juli 2023",
                 type: "Freelance • Hybrid",
                 title: "IoT Engineer",
                 company: "Masjid Al Banna",
@@ -51,7 +51,7 @@ export const timelineTranslations = {
         additionalExperiences: [
             {
                 id: 4,
-                period: "Juli 2025 – Sekarang",
+                period: "Juli 2025 – Desember 2025",
                 type: "Freelance • Hybrid",
                 title: "Multimedia Project Manager",
                 company: "Luckystar Wedding & Event Organizer",
@@ -66,7 +66,7 @@ export const timelineTranslations = {
             },
             {
                 id: 5,
-                period: "Mei 2021 – Sekarang",
+                period: "Mei 2021 – Juli 2023",
                 type: "Freelance • Hybrid",
                 title: "Network Engineer",
                 company: "SDIT Muhammadiyah Wirosari",
@@ -115,7 +115,7 @@ export const timelineTranslations = {
             },
             {
                 id: 3,
-                period: "October 2021 – Present",
+                period: "October 2021 – July 2023",
                 type: "Freelance • Hybrid",
                 title: "IoT Engineer",
                 company: "Masjid Al Banna",
@@ -132,7 +132,7 @@ export const timelineTranslations = {
         additionalExperiences: [
             {
                 id: 4,
-                period: "July 2025 – Present",
+                period: "July 2025 – December 2025",
                 type: "Freelance • Hybrid",
                 title: "Multimedia Project Manager",
                 company: "Luckystar Wedding & Event Organizer",
@@ -147,7 +147,7 @@ export const timelineTranslations = {
             },
             {
                 id: 5,
-                period: "May 2021 – Present",
+                period: "May 2021 – July 2023",
                 type: "Freelance • Hybrid",
                 title: "Network Engineer",
                 company: "SDIT Muhammadiyah Wirosari",
