@@ -16,14 +16,14 @@ import { MainContent } from "./main-content";
 import { useLanguage } from "@/contexts/LanguageContext";
 
 export function NavbarDemo() {
-    const { language, setLanguage } = useLanguage();
+    const { language, setLanguage, t } = useLanguage();
     const navItems = [
         {
-            name: "Home",
+            name: t("nav.home"),
             link: "#home",
         },
         {
-            name: "About",
+            name: t("nav.about"),
             link: "#about",
         },
         // {
@@ -31,15 +31,15 @@ export function NavbarDemo() {
         //     link: "#skills",
         // },
         {
-            name: "Projects",
+            name: t("nav.projects"),
             link: "#projects",
         },
         {
-            name: "Awards",
+            name: t("nav.awards"),
             link: "#awards",
         },
         {
-            name: "Experience",
+            name: t("nav.experience"),
             link: "#experience",
         },
     ];
@@ -65,7 +65,7 @@ export function NavbarDemo() {
                         </button>
                         {/* <NavbarButton variant="secondary">Login</NavbarButton> */}
                         <NavbarButton variant="primary">
-                            Contact Me
+                            {t("nav.contact")}
                         </NavbarButton>
                     </div>
                 </NavBody>
@@ -123,7 +123,7 @@ export function NavbarDemo() {
                                 variant="primary"
                                 className="w-full"
                             >
-                                Contact Me
+                                {t("nav.contact")}
                             </NavbarButton>
                         </div>
                     </MobileNavMenu>

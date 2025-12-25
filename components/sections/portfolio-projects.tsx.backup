@@ -1,5 +1,4 @@
 "use client";
-
 import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
 import { useState, useEffect } from "react";
@@ -8,6 +7,360 @@ import { projectsData, type Project } from "@/locales/projects-data";
 
 const categories = ["All", "Web App", "IoT"];
 
+// Modal Component
+function ProjectModal({
+        id: 9,
+        title: "Gampangin – Premium Sharing Management Platform",
+        description:
+            "Platform berbasis web untuk pengelolaan akun premium sharing dengan sistem pembayaran, referral, dan manajemen akses otomatis.",
+        fullDescription:
+            "Gampangin merupakan platform berbasis web yang dikembangkan untuk mempermudah pengelolaan akun premium sharing secara terpusat. Sistem ini menyediakan fitur manajemen user, pembelian akun premium melalui sistem pembayaran, serta mekanisme referral yang memberikan bonus atau potongan harga kepada pengguna. Selain itu, sistem dilengkapi dengan fitur validasi masa aktif akun dan pembagian akses premium secara otomatis. Proyek ini juga menerapkan CI/CD menggunakan GitHub Actions untuk memastikan proses build dan deployment ke server berjalan secara otomatis dan konsisten.",
+        image: "/images/projects/gampangin/thumbnail.png",
+        video: "https://www.youtube.com/embed/QYEdGRNe_PY?si=pkLvMXMbLUCrIcz4",
+        category: "Web App",
+        technologies: [
+            "Laravel",
+            "MySQL",
+            "PHP",
+            "GitHub Actions",
+            "CI/CD",
+            "REST API",
+        ],
+        liveUrl: "https://gampangin.my.id/",
+        githubUrl: "https://gampangin.my.id/",
+        features: [
+            "Sistem CRUD user untuk pengelolaan akun premium sharing",
+            "Fitur payment untuk pembelian akun premium",
+            "Sistem referral dengan bonus dan potongan harga",
+            "Manajemen akun premium sharing (validasi masa aktif & pembagian akses)",
+            "Otomatisasi deployment menggunakan CI/CD GitHub Actions",
+            "Manajemen hak akses pengguna",
+        ],
+        screenshots: [
+            "/images/projects/gampangin/1.png",
+            "/images/projects/gampangin/2.png",
+            "/images/projects/gampangin/3.png",
+            "/images/projects/gampangin/4.png",
+            "/images/projects/gampangin/5.png",
+        ],
+    },
+    {
+        id: 0,
+        title: "IoT Energy Monitoring & Automation System",
+        description:
+            "Sistem monitoring dan otomatisasi energi listrik berbasis IoT untuk meningkatkan efisiensi penggunaan listrik di lingkungan kampus.",
+        fullDescription:
+            "Sistem ini merupakan prototipe monitoring dan otomatisasi energi listrik berbasis Internet of Things (IoT) yang diterapkan di lingkungan kampus. Sistem memanfaatkan perangkat IoT berbasis ESP32 yang terintegrasi dengan sensor daya, sensor okupansi, dan aktuator untuk memantau konsumsi listrik secara real-time serta mengontrol perangkat elektronik secara otomatis maupun manual. Data dikirim ke backend server dan divisualisasikan melalui dashboard web interaktif untuk membantu pengelola kampus menganalisis pola penggunaan energi, mengurangi pemborosan listrik, dan meningkatkan efisiensi operasional berbasis data.",
+        image: "/images/projects/roomon/thumbnail.png",
+        video: "https://www.youtube.com/embed/JBeOXN_VDiI?si=pImbt_flxCSm-g_O",
+        category: "IoT",
+        technologies: [
+            "ESP32",
+            "Node.js",
+            "Express.js",
+            "React",
+            "REST API",
+            "WebSocket",
+            "MariaDB",
+        ],
+        liveUrl: "https://roomon.rcl.my.id/",
+        githubUrl: "#",
+        features: [
+            "Monitoring konsumsi energi listrik secara real-time",
+            "Otomatisasi perangkat listrik berbasis okupansi ruangan",
+            "Kontrol perangkat jarak jauh melalui dashboard web",
+            "Visualisasi data energi (daya, kWh, biaya, peak usage)",
+            "WebSocket untuk update data real-time",
+            "Pencatatan data historis dan analisis efisiensi energi",
+            "Sistem autentikasi pengguna (JWT)",
+        ],
+        screenshots: [
+            "/images/projects/roomon/1.png",
+            "/images/projects/roomon/2.png",
+            "/images/projects/roomon/3.png",
+            "/images/projects/roomon/4.png",
+            "/images/projects/roomon/5.png",
+            "/images/projects/roomon/6.png",
+            "/images/projects/roomon/7.png",
+            "/images/projects/roomon/8.png",
+            "/images/projects/roomon/9.png",
+            "/images/projects/roomon/10.png",
+        ],
+    },
+    {
+        id: 20,
+        title: "IPJ Redesign – Portal Informasi Pangan Jakarta",
+        description:
+            "Portal resmi Pemerintah Provinsi DKI Jakarta untuk penyajian dan pengelolaan data informasi pangan secara terpusat dan terintegrasi.",
+        fullDescription:
+            "IPJ Redesign merupakan proyek pengembangan ulang Portal Informasi Pangan Jakarta yang bertujuan meningkatkan performa, keamanan, dan keandalan sistem dalam penyajian data pangan kepada publik. Pada proyek ini, sistem backend dibangun untuk menangani pengelolaan metadata, penyediaan data terstruktur, serta pembuatan laporan dalam format PDF dan Excel. Backend juga dioptimalkan dengan mekanisme caching menggunakan Redis untuk menjaga integritas data dan meningkatkan performa akses, serta dilengkapi dengan pengamanan API menggunakan JWT dan dokumentasi API berbasis Swagger.",
+        image: "/images/projects/ipj/thumbnail.png",
+        category: "Web App",
+        technologies: [
+            "Node.js",
+            "Express.js",
+            "PostgreSQL",
+            "Redis",
+            "PDFKit",
+            "ExcelJS",
+            "JWT",
+            "Swagger",
+        ],
+        liveUrl: "https://infopangan.jakarta.go.id/",
+        githubUrl: "#",
+        features: [
+            "Pengembangan REST API untuk metadata pangan",
+            "Pembuatan dan preview laporan PDF",
+            "Export data laporan ke format Excel",
+            "Optimasi query database PostgreSQL",
+            "Caching data menggunakan Redis",
+            "Keamanan API menggunakan JWT",
+            "Dokumentasi API dengan Swagger",
+        ],
+        screenshots: [
+            "/images/projects/ipj/1.png",
+            "/images/projects/ipj/2.png",
+            "/images/projects/ipj/3.png",
+            "/images/projects/ipj/4.png",
+            "/images/projects/ipj/5.png",
+        ],
+    },
+    {
+        id: 10,
+        title: "Quran Hifz – Quran Memorization Application",
+        description:
+            "Aplikasi mobile untuk membantu proses hafalan Al-Qur’an dengan sistem backend yang aman, terstruktur, dan teroptimasi.",
+        fullDescription:
+            "Quran Hifz merupakan aplikasi mobile yang dirancang untuk membantu pengguna dalam proses menghafal Al-Qur’an melalui sistem yang terstruktur dan mudah digunakan. Pada proyek ini, backend system dikembangkan untuk menangani berbagai kebutuhan aplikasi seperti pengelolaan data hafalan, autentikasi pengguna, serta penyediaan API yang stabil dan aman. Fokus utama pengembangan mencakup penanganan alur sistem (flow), perbaikan permasalahan timezone, integritas data, caching menggunakan Redis, serta penerapan unit testing dan endpoint testing untuk memastikan kualitas dan keandalan sistem.",
+        image: "/images/projects/hifz/thumbnail.png",
+        category: "Web App",
+        technologies: [
+            "Node.js",
+            "Express.js",
+            "PostgreSQL",
+            "Redis",
+            "JWT",
+            "Swagger",
+            "Jest",
+            "Supertest",
+        ],
+        liveUrl:
+            "https://play.google.com/store/apps/details?id=id.bigio.dzikra.quran",
+        githubUrl: "#",
+        features: [
+            "Pengembangan REST API untuk kebutuhan aplikasi mobile",
+            "Perbaikan dan optimasi flow sistem backend",
+            "Penanganan permasalahan timezone",
+            "Unit testing dan endpoint testing menggunakan Jest & Supertest",
+            "Caching data menggunakan Redis",
+            "Optimasi query PostgreSQL",
+            "Keamanan API menggunakan JWT",
+            "Dokumentasi API dengan Swagger",
+        ],
+        screenshots: [
+            "/images/projects/hifz/1.png",
+            "/images/projects/hifz/2.png",
+        ],
+    },
+
+    {
+        id: 2,
+        title: "Student Financial Management",
+        description:
+            "Sistem IoT untuk pengelolaan keuangan siswa dengan kartu OSIS sebagai alat pembayaran digital di kantin sekolah. Juara 1 Krenova Kab. Grobogan.",
+        fullDescription:
+            "Sistem IoT untuk pengelolaan keuangan siswa dengan kartu OSIS sebagai alat pembayaran digital di kantin sekolah. Sistem ini terintegrasi dengan database siswa dan memungkinkan orang tua untuk memantau pengeluaran anak. Proyek ini berhasil meraih Juara 1 Krenova Kabupaten Grobogan.",
+        image: "/images/projects/sfm/thumbnail.png",
+        category: "IoT",
+        technologies: ["IoT", "Web App", "PWA", "RFID"],
+        liveUrl: "#",
+        githubUrl: "#",
+        features: [
+            "Pembayaran cashless dengan kartu OSIS",
+            "Dashboard orang tua untuk monitoring",
+            "Laporan keuangan real-time",
+            "Top-up saldo via mobile app",
+        ],
+        screenshots: [
+            "/images/projects/sfm/1.png",
+            "/images/projects/sfm/2.png",
+            "/images/projects/sfm/3.png",
+            "/images/projects/sfm/4.png",
+            "/images/projects/sfm/5.png",
+            "/images/projects/sfm/6.png",
+            "/images/projects/sfm/7.png",
+            "/images/projects/sfm/8.png",
+        ],
+    },
+    {
+        id: 3,
+        title: "Smart Thermometer & Record",
+        description:
+            "Sistem perpustakaan digital dengan pemindaian suhu dan kartu OSIS untuk meminjam buku otomatis. Juara Harapan 1 Krenova Prov. Jateng.",
+        fullDescription:
+            "Sistem perpustakaan digital dengan pemindaian suhu dan kartu OSIS untuk meminjam buku otomatis. Dibuat saat pandemi COVID-19 untuk memastikan keamanan pengunjung perpustakaan. Proyek ini berhasil meraih Juara Harapan 1 Krenova Provinsi Jawa Tengah.",
+        image: "/images/projects/star/thumbnail.png",
+        category: "IoT",
+        technologies: ["IoT", "Web App", "Arduino", "Database"],
+        liveUrl: "#",
+        githubUrl: "#",
+        features: [
+            "Pemindaian suhu otomatis",
+            "Peminjaman buku dengan kartu OSIS",
+            "Rekam jejak pengunjung",
+            "Dashboard admin untuk monitoring",
+            "Email Peringatan Pengembalian Buku",
+        ],
+        screenshots: [
+            "/images/projects/star/1.png",
+            "/images/projects/star/2.png",
+            "/images/projects/star/3.png",
+            "/images/projects/star/4.png",
+        ],
+    },
+    // {
+    //     id: 11,
+    //     title: "Masjid IoT Automation System",
+    //     description:
+    //         "Sistem IoT untuk mengotomasi perangkat elektronik masjid (lampu, AC, kipas) dengan kontrol real-time dan scheduling otomatis.",
+    //     fullDescription:
+    //         "Sistem IoT untuk mengotomasi perangkat elektronik masjid (lampu, AC, kipas) dengan kontrol real-time dan scheduling otomatis. Sistem ini memungkinkan pengurus masjid untuk mengontrol semua perangkat elektronik dari satu dashboard terpusat, menghemat energi dan meningkatkan efisiensi operasional.",
+    //     image: "https://images.unsplash.com/photo-1591768788525-8f69b7f7a1b5?w=800&h=600&fit=crop",
+    //     category: "IoT",
+    //     technologies: ["Express", "WebSocket", "React", "Arduino"],
+    //     liveUrl: "#",
+    //     githubUrl: "#",
+    //     features: [
+    //         "Kontrol real-time via web dashboard",
+    //         "Scheduling otomatis berdasarkan waktu sholat",
+    //         "Monitoring konsumsi listrik",
+    //         "Notifikasi status perangkat",
+    //     ],
+    //     screenshots: [
+    //         "https://images.unsplash.com/photo-1558346490-a72e53ae2d4f?w=800&h=600&fit=crop",
+    //         "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=600&fit=crop",
+    //         "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=600&fit=crop",
+    //     ],
+    // },
+    // {
+    //     id: 4,
+    //     title: "SMK Al-Hadi Gresik Website",
+    //     description:
+    //         "Website sekolah dengan sistem informasi akademik dan profil sekolah yang informatif dan user-friendly.",
+    //     fullDescription:
+    //         "Website sekolah dengan sistem informasi akademik dan profil sekolah yang informatif dan user-friendly. Website ini menampilkan informasi lengkap tentang sekolah, kegiatan, berita, dan galeri foto.",
+    //     image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=800&h=600&fit=crop",
+    //     category: "Web App",
+    //     technologies: ["Next.js", "Tailwind CSS", "CMS"],
+    //     liveUrl: "https://smkalhadigresik.sch.id/",
+    //     githubUrl: "#",
+    //     features: [
+    //         "Profil sekolah lengkap",
+    //         "Berita dan kegiatan terbaru",
+    //         "Galeri foto dan video",
+    //         "Informasi pendaftaran siswa baru",
+    //     ],
+    //     screenshots: [
+    //         "https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=800&h=600&fit=crop",
+    //         "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=800&h=600&fit=crop",
+    //         "https://images.unsplash.com/photo-1531482615713-2afd69097998?w=800&h=600&fit=crop",
+    //     ],
+    // },
+    // {
+    //     id: 5,
+    //     title: "Unaki Press",
+    //     description:
+    //         "Platform publikasi dan berita kampus untuk menyebarkan informasi akademik dan kegiatan universitas.",
+    //     fullDescription:
+    //         "Platform publikasi dan berita kampus untuk menyebarkan informasi akademik dan kegiatan universitas. Dibangun dengan Laravel dan MySQL untuk performa optimal.",
+    //     image: "https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?w=800&h=600&fit=crop",
+    //     category: "Web App",
+    //     technologies: ["Laravel", "MySQL", "Bootstrap"],
+    //     liveUrl: "#",
+    //     githubUrl: "#",
+    //     features: [
+    //         "Manajemen artikel dan berita",
+    //         "Kategori dan tag konten",
+    //         "Dashboard admin",
+    //         "SEO optimized",
+    //     ],
+    //     screenshots: [
+    //         "https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?w=800&h=600&fit=crop",
+    //         "https://images.unsplash.com/photo-1557838923-2985c318be48?w=800&h=600&fit=crop",
+    //     ],
+    // },
+    // {
+    //     id: 6,
+    //     title: "Expo Grobogan Visitor System",
+    //     description:
+    //         "Sistem IoT untuk pendataan pengunjung dan pemantauan suhu tubuh otomatis selama event Expo Grobogan dengan dashboard real-time.",
+    //     fullDescription:
+    //         "Sistem IoT untuk pendataan pengunjung dan pemantauan suhu tubuh otomatis selama event Expo Grobogan dengan dashboard real-time. Sistem ini membantu penyelenggara event untuk memastikan protokol kesehatan selama pandemi.",
+    //     image: "https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=800&h=600&fit=crop",
+    //     category: "IoT",
+    //     technologies: ["IoT", "Express", "React", "Sensor"],
+    //     liveUrl: "#",
+    //     githubUrl: "#",
+    //     features: [
+    //         "Pendataan pengunjung otomatis",
+    //         "Pemindaian suhu tubuh",
+    //         "Dashboard real-time",
+    //         "Laporan statistik harian",
+    //     ],
+    //     screenshots: [
+    //         "https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=800&h=600&fit=crop",
+    //         "https://images.unsplash.com/photo-1559028012-481c04fa702d?w=800&h=600&fit=crop",
+    //     ],
+    // },
+    // {
+    //     id: 7,
+    //     title: "Network Infrastructure SDIT",
+    //     description:
+    //         "Desain dan implementasi infrastruktur jaringan sekolah dengan segmentasi untuk Admin, Guru, Siswa, dan Tamu menggunakan Mikrotik.",
+    //     fullDescription:
+    //         "Desain dan implementasi infrastruktur jaringan sekolah dengan segmentasi untuk Admin, Guru, Siswa, dan Tamu menggunakan Mikrotik. Termasuk konfigurasi VLAN, QoS, dan firewall untuk keamanan jaringan.",
+    //     image: "https://images.unsplash.com/photo-1544197150-b99a580bb7a8?w=800&h=600&fit=crop",
+    //     category: "System",
+    //     technologies: ["Mikrotik", "Networking", "VLAN", "QoS"],
+    //     liveUrl: "#",
+    //     githubUrl: "#",
+    //     features: [
+    //         "Segmentasi jaringan (VLAN)",
+    //         "Quality of Service (QoS)",
+    //         "Firewall dan keamanan",
+    //         "Bandwidth management",
+    //     ],
+    //     screenshots: [
+    //         "https://images.unsplash.com/photo-1544197150-b99a580bb7a8?w=800&h=600&fit=crop",
+    //         "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=800&h=600&fit=crop",
+    //     ],
+    // },
+    // {
+    //     id: 8,
+    //     title: "Unaki Link Shortener",
+    //     description:
+    //         "Aplikasi pemendek URL untuk kebutuhan internal kampus dengan tracking dan analytics.",
+    //     fullDescription:
+    //         "Aplikasi pemendek URL untuk kebutuhan internal kampus dengan tracking dan analytics. Memungkinkan pengguna untuk membuat short link dan memantau statistik klik.",
+    //     image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=600&fit=crop",
+    //     category: "Web App",
+    //     technologies: ["Node.js", "Express", "MongoDB"],
+    //     liveUrl: "#",
+    //     githubUrl: "#",
+    //     features: [
+    //         "Pembuatan short link",
+    //         "Analytics dan statistik klik",
+    //         "Custom alias",
+    //         "QR Code generator",
+    //     ],
+    //     screenshots: [
+    //         "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=600&fit=crop",
+    //         "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=600&fit=crop",
+    //     ],
+    // },
+];
+
+// Modal Component
 function ProjectModal({
     project,
     isOpen,
@@ -17,7 +370,6 @@ function ProjectModal({
     isOpen: boolean;
     onClose: () => void;
 }) {
-    const { t } = useLanguage();
     const [selectedImage, setSelectedImage] = useState<string | null>(null);
     const [isImageViewerOpen, setIsImageViewerOpen] = useState(false);
 
@@ -203,10 +555,10 @@ function ProjectModal({
                                             height="315"
                                             src={project.video}
                                             title="YouTube video player"
-                                            frameBorder="0"
+                                            frameborder="0"
                                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                                            referrerPolicy="strict-origin-when-cross-origin"
-                                            allowFullScreen
+                                            referrerpolicy="strict-origin-when-cross-origin"
+                                            allowfullscreen
                                         ></iframe>
                                     </div>
                                 )}
@@ -375,7 +727,7 @@ function ProjectModal({
 }
 
 export function PortfolioProjects() {
-    const { t, language } = useLanguage();
+    const { t } = useLanguage();
     const [activeCategory, setActiveCategory] = useState("All");
     const [hoveredId, setHoveredId] = useState<number | null>(null);
     const [selectedProject, setSelectedProject] = useState<Project | null>(
@@ -383,7 +735,6 @@ export function PortfolioProjects() {
     );
     const [isModalOpen, setIsModalOpen] = useState(false);
 
-    const projects = projectsData[language];
     const filteredProjects =
         activeCategory === "All"
             ? projects
@@ -420,7 +771,7 @@ export function PortfolioProjects() {
                     className="text-center mb-12"
                 >
                     <h2 className="text-sm font-semibold text-blue-400 uppercase tracking-widest mb-3">
-                        {t("projects.subtitle")}
+                        Portfolio
                     </h2>
                     <h3 className="text-3xl md:text-5xl font-bold text-white mb-4">
                         {t("projects.title")}
@@ -442,7 +793,7 @@ export function PortfolioProjects() {
                     {categories.map((category) => {
                         const translationKey = `projects.filter.${category
                             .toLowerCase()
-                            .replace(" ", "")}` as string;
+                            .replace(" ", "")}` as any;
                         return (
                             <button
                                 key={category}

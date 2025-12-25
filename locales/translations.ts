@@ -50,12 +50,14 @@ export const translations = {
         "about.techStackTitle": "Teknologi yang Saya Gunakan",
 
         // Timeline
+        "timeline.subtitle": "Perjalanan Karir",
         "timeline.title": "Pengalaman Profesional",
         "timeline.viewMore": "Lihat Pengalaman Lainnya",
         "timeline.viewLess": "Sembunyikan",
         "timeline.present": "Sekarang",
 
         // Portfolio Projects
+        "projects.subtitle": "PORTOFOLIO",
         "projects.title": "Proyek Unggulan",
         "projects.filter.all": "Semua",
         "projects.filter.webapp": "Web App",
@@ -63,14 +65,30 @@ export const translations = {
         "projects.filter.mobileapp": "Mobile App",
         "projects.filter.system": "Sistem",
         "projects.viewDetails": "Lihat Detail",
+        "projects.description":
+            "Berikut adalah beberapa proyek yang telah saya kerjakan. Setiap proyek mencerminkan dedikasi saya dalam menciptakan solusi yang berkualitas.",
+        "projects.screenshots": "Screenshots",
+        "projects.video": "Video",
+        "projects.mainFeatures": "Fitur Utama",
+        "projects.technologies": "Teknologi",
+        "projects.liveDemo": "Live Demo",
+        "projects.viewCode": "View Code",
+        "projects.viewAll": "Lihat Semua Proyek",
 
         // Achievements
+        "achievements.subtitle": "PENCAPAIAN",
         "achievements.title": "Pencapaian & Sertifikasi",
         "achievements.filter.all": "Semua",
         "achievements.filter.competition": "Kompetisi",
         "achievements.filter.award": "Penghargaan",
         "achievements.filter.leadership": "Kepemimpinan",
         "achievements.filter.certification": "Sertifikasi",
+        "achievements.description":
+            "Beberapa penghargaan dan pencapaian yang telah saya raih selama perjalanan karir sebagai developer.",
+
+        // Contact Me
+        "contact.ctaText": "Tertarik untuk berkolaborasi?",
+        "contact.ctaButton": "Mari Terhubung",
     },
     en: {
         // Navbar
@@ -123,12 +141,14 @@ export const translations = {
         "about.techStackTitle": "Technologies I Work With",
 
         // Timeline
+        "timeline.subtitle": "Career Journey",
         "timeline.title": "Professional Experience",
         "timeline.viewMore": "View More Experiences",
         "timeline.viewLess": "Show Less",
         "timeline.present": "Present",
 
         // Portfolio Projects
+        "projects.subtitle": "PORTFOLIO",
         "projects.title": "Featured Projects",
         "projects.filter.all": "All",
         "projects.filter.webapp": "Web App",
@@ -136,14 +156,30 @@ export const translations = {
         "projects.filter.mobileapp": "Mobile App",
         "projects.filter.system": "System",
         "projects.viewDetails": "View Details",
+        "projects.description":
+            "Here are some of the projects I have worked on. Each project reflects my dedication to creating quality solutions.",
+        "projects.screenshots": "Screenshots",
+        "projects.video": "Video",
+        "projects.mainFeatures": "Main Features",
+        "projects.technologies": "Technologies",
+        "projects.liveDemo": "Live Demo",
+        "projects.viewCode": "View Code",
+        "projects.viewAll": "View All Projects",
 
         // Achievements
+        "achievements.subtitle": "ACHIEVEMENTS",
         "achievements.title": "Achievements & Certifications",
         "achievements.filter.all": "All",
         "achievements.filter.competition": "Competition",
         "achievements.filter.award": "Award",
         "achievements.filter.leadership": "Leadership",
         "achievements.filter.certification": "Certification",
+        "achievements.description":
+            "Some of the awards and achievements I have earned throughout my career journey as a developer.",
+
+        // Contact Me
+        "contact.ctaText": "Interested in collaborating?",
+        "contact.ctaButton": "Let's Connect",
     },
 };
 

@@ -43,18 +43,19 @@ const getWhatIDo = (t: (key: string) => string) => [
 ];
 
 const techStack = [
-    { name: "Laravel", icon: "/images/laravel.svg" },
-    { name: "Next.js", icon: "/images/nextjs.svg" },
-    { name: "React", icon: "/images/react.svg" },
-    { name: "Node.js", icon: "/images/nodejs.svg" },
-    { name: "Express", icon: "/images/express.svg" },
-    { name: "Tailwind CSS", icon: "/images/tailwind.svg" },
-    { name: "PostgreSQL", icon: "/images/postgresql.svg" },
-    { name: "MySQL", icon: "/images/mysql.svg" },
-    { name: "Docker", icon: "/images/docker.svg" },
-    { name: "Git", icon: "/images/git.svg" },
-    { name: "Arduino", icon: "/images/arduino.svg" },
-    { name: "Mikrotik", icon: "/images/mikrotik.svg" },
+    { name: "Laravel", icon: "/images/logo/laravel.svg" },
+    { name: "Next.js", icon: "/images/logo/nextdotjs.svg" },
+    { name: "React", icon: "/images/logo/react.svg" },
+    { name: "Node.js", icon: "/images/logo/nodedotjs.svg" },
+    { name: "Express", icon: "/images/logo/express.svg" },
+    { name: "Tailwind CSS", icon: "/images/logo/tailwindcss.svg" },
+    { name: "PostgreSQL", icon: "/images/logo/postgresql.svg" },
+    { name: "MySQL", icon: "/images/logo/mysql.svg" },
+    { name: "Docker", icon: "/images/logo/docker.svg" },
+    { name: "Git", icon: "/images/logo/git.svg" },
+    { name: "Arduino", icon: "/images/logo/arduino.svg" },
+    { name: "Mikrotik", icon: "/images/logo/mikrotik.svg" },
+    { name: "Linux", icon: "/images/logo/linux.svg" },
 ];
 
 function TechStackScroll({ techStack }: { techStack: typeof techStack }) {
@@ -125,6 +126,7 @@ function TechStackScroll({ techStack }: { techStack: typeof techStack }) {
                                 src={tech.icon}
                                 alt={tech.name}
                                 className="w-full h-full object-contain pointer-events-none"
+                                style={{ filter: "brightness(0) invert(1)" }}
                             />
                         </div>
                         <span className="text-xs text-neutral-400 group-hover:text-blue-400 transition-colors whitespace-nowrap">
