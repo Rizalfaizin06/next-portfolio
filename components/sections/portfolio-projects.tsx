@@ -5,6 +5,7 @@ import Image from "next/image";
 import { useState, useEffect } from "react";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { projectsData, type Project } from "@/locales/projects-data";
+import { WHATSAPP_LINK } from "@/lib/constants";
 
 const categories = ["All", "Web App", "IoT"];
 
@@ -560,7 +561,9 @@ export function PortfolioProjects() {
                     className="text-center mt-12"
                 >
                     <a
-                        href="#"
+                        href={WHATSAPP_LINK}
+                        target="_blank"
+                        rel="noopener noreferrer"
                         className="inline-flex items-center gap-2 px-8 py-4 bg-white/5 text-white font-semibold rounded-full border border-white/10 hover:bg-white/10 hover:border-blue-500/50 transition-all group"
                     >
                         {t("projects.viewAll")}

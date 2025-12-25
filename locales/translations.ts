@@ -31,7 +31,7 @@ export const translations = {
         "about.bio.paragraph1":
             "Saya adalah Fullstack Developer dengan pengalaman lebih dari 4 tahun di bidang pengembangan web, aplikasi mobile, IoT, dan manajemen jaringan. Memiliki kemampuan di Frontend (React, Next.js, Flutter) dan Backend (Node.js, Express, Laravel), serta keahlian dalam infrastruktur IT (MikroTik, Cisco, Linux Server).",
         "about.bio.paragraph2":
-            "Telah menyelesaikan lebih dari 17 proyek mulai dari sistem informasi sekolah, e-commerce, aplikasi IoT untuk masjid dan institusi pendidikan, hingga sistem manajemen keuangan siswa berbasis kartu OSIS. Berpengalaman dalam memimpin proyek multimedia, mengelola infrastruktur jaringan kampus, dan memberikan solusi teknologi end-to-end untuk berbagai klien.",
+            "Telah menyelesaikan lebih dari 30 proyek mulai dari sistem informasi sekolah, e-commerce, aplikasi IoT untuk masjid dan institusi pendidikan, hingga sistem manajemen keuangan siswa berbasis kartu OSIS. Berpengalaman dalam memimpin proyek multimedia, mengelola infrastruktur jaringan kampus, dan memberikan solusi teknologi end-to-end untuk berbagai klien.",
 
         // About Me - What I Do
         "about.whatIDo": "Yang Saya Kerjakan",
@@ -122,7 +122,7 @@ export const translations = {
         "about.bio.paragraph1":
             "I am a Fullstack Developer with over 4 years of experience in web development, mobile applications, IoT, and network management. Proficient in Frontend (React, Next.js, Flutter) and Backend (Node.js, Express, Laravel), as well as IT infrastructure (MikroTik, Cisco, Linux Server).",
         "about.bio.paragraph2":
-            "Successfully completed over 17 projects ranging from school information systems, e-commerce, IoT applications for mosques and educational institutions, to student financial management systems based on student ID cards. Experienced in leading multimedia projects, managing campus network infrastructure, and providing end-to-end technology solutions for various clients.",
+            "Successfully completed over 30 projects ranging from school information systems, e-commerce, IoT applications for mosques and educational institutions, to student financial management systems based on student ID cards. Experienced in leading multimedia projects, managing campus network infrastructure, and providing end-to-end technology solutions for various clients.",
 
         // About Me - What I Do
         "about.whatIDo": "What I Do",

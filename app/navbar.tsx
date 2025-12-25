@@ -14,6 +14,7 @@ import { useState } from "react";
 import { SpotlightContent } from "@/components/sections/spotlight";
 import { MainContent } from "./main-content";
 import { useLanguage } from "@/contexts/LanguageContext";
+import { WHATSAPP_LINK } from "@/lib/constants";
 
 export function NavbarDemo() {
     const { language, setLanguage, t } = useLanguage();
@@ -64,7 +65,12 @@ export function NavbarDemo() {
                             {language === "id" ? "EN" : "ID"}
                         </button>
                         {/* <NavbarButton variant="secondary">Login</NavbarButton> */}
-                        <NavbarButton variant="primary">
+                        <NavbarButton
+                            variant="primary"
+                            href={WHATSAPP_LINK}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
                             {t("nav.contact")}
                         </NavbarButton>
                     </div>
@@ -122,6 +128,9 @@ export function NavbarDemo() {
                                 onClick={() => setIsMobileMenuOpen(false)}
                                 variant="primary"
                                 className="w-full"
+                                href={WHATSAPP_LINK}
+                                target="_blank"
+                                rel="noopener noreferrer"
                             >
                                 {t("nav.contact")}
                             </NavbarButton>

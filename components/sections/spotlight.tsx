@@ -1,6 +1,7 @@
 "use client";
 import { Spotlight } from "@/components/ui/spotlight-new";
 import { useLanguage } from "@/contexts/LanguageContext";
+import { WHATSAPP_LINK } from "@/lib/constants";
 
 export function SpotlightContent() {
     const { t } = useLanguage();
@@ -28,7 +29,9 @@ export function SpotlightContent() {
                 {/* CTA Buttons */}
                 <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mt-10">
                     <a
-                        href="#contact"
+                        href={WHATSAPP_LINK}
+                        target="_blank"
+                        rel="noopener noreferrer"
                         className="group relative inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-blue-600/50 to-blue-400 text-white font-semibold rounded-full hover:shadow-lg hover:shadow-blue-500/50 transition-all hover:scale-105"
                     >
                         <span>{t("nav.contact")}</span>

@@ -1,7 +1,7 @@
 "use client";
 import { AboutMe } from "@/components/sections/about-me";
 import { Achievements } from "@/components/sections/achievements";
-
+import { Contact } from "@/components/sections/contact";
 import { PortfolioProjects } from "@/components/sections/portfolio-projects";
 import { SpotlightContent } from "@/components/sections/spotlight";
 import { TechStack } from "@/components/sections/tech-stack";
@@ -16,6 +16,7 @@ export function MainContent() {
             <PortfolioProjects />
             <Achievements />
             <Timeline />
+            <Contact />
         </div>
     );
 }

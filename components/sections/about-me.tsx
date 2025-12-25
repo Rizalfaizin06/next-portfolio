@@ -14,9 +14,9 @@ const skills = [
 
 const getStats = (t: (key: string) => string) => [
     { label: `${t("about.years")} ${t("about.experience")}`, value: "4+" },
-    { label: `${t("about.projects")} ${t("about.completed")}`, value: "17+" },
+    { label: `${t("about.projects")} ${t("about.completed")}`, value: "30+" },
     { label: t("about.certifications"), value: "5" },
-    { label: `${t("about.techStack")} ${t("about.mastered")}`, value: "30+" },
+    { label: `${t("about.techStack")} ${t("about.mastered")}`, value: "25+" },
 ];
 
 const getWhatIDo = (t: (key: string) => string) => [
@@ -43,19 +43,32 @@ const getWhatIDo = (t: (key: string) => string) => [
 ];
 
 const techStack = [
+    { name: "JavaScript", icon: "/images/logo/javascript.svg" },
+    { name: "TypeScript", icon: "/images/logo/typescript.svg" },
+    { name: "PHP", icon: "/images/logo/php.svg" },
     { name: "Laravel", icon: "/images/logo/laravel.svg" },
+    { name: "CodeIgniter", icon: "/images/logo/codeigniter.svg" },
     { name: "Next.js", icon: "/images/logo/nextdotjs.svg" },
     { name: "React", icon: "/images/logo/react.svg" },
     { name: "Node.js", icon: "/images/logo/nodedotjs.svg" },
     { name: "Express", icon: "/images/logo/express.svg" },
+    { name: "Flutter", icon: "/images/logo/flutter.svg" },
     { name: "Tailwind CSS", icon: "/images/logo/tailwindcss.svg" },
     { name: "PostgreSQL", icon: "/images/logo/postgresql.svg" },
     { name: "MySQL", icon: "/images/logo/mysql.svg" },
+    { name: "MongoDB", icon: "/images/logo/mongodb.svg" },
+    { name: "Redis", icon: "/images/logo/redis.svg" },
+    { name: "Firebase", icon: "/images/logo/firebase.svg" },
     { name: "Docker", icon: "/images/logo/docker.svg" },
     { name: "Git", icon: "/images/logo/git.svg" },
+    { name: "GitHub", icon: "/images/logo/github.svg" },
+    { name: "Postman", icon: "/images/logo/postman.svg" },
+    { name: "Swagger", icon: "/images/logo/swagger.svg" },
     { name: "Arduino", icon: "/images/logo/arduino.svg" },
     { name: "Mikrotik", icon: "/images/logo/mikrotik.svg" },
+    { name: "Cisco", icon: "/images/logo/cisco.svg" },
     { name: "Linux", icon: "/images/logo/linux.svg" },
+    { name: "Figma", icon: "/images/logo/figma.svg" },
 ];
 
 function TechStackScroll({ techStack }: { techStack: typeof techStack }) {
@@ -168,7 +181,7 @@ export function AboutMe() {
                 </motion.div>
 
                 {/* Profile & About */}
-                <div className="grid md:grid-cols-[320px_1fr] gap-6 items-center mb-16">
+                <div className="grid md:grid-cols-[320px_1fr] gap-12 items-center mb-16">
                     {/* Left Column - Profile Image */}
                     <motion.div
                         initial={{ opacity: 0, x: -50 }}
@@ -198,10 +211,10 @@ export function AboutMe() {
                         viewport={{ once: true }}
                         className="text-neutral-300 space-y-6 text-center md:text-left"
                     >
-                        <p className="text-xl md:text-2xl leading-relaxed">
+                        <p className="text-xl md:text-xl leading-relaxed">
                             {t("about.bio.paragraph1")}
                         </p>
-                        <p className="text-base md:text-lg leading-relaxed">
+                        <p className="text-base md:text-xl leading-relaxed">
                             {t("about.bio.paragraph2")}
                         </p>
                     </motion.div>

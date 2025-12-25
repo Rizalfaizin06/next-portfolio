@@ -112,7 +112,6 @@ import { motion } from "framer-motion";
 import { useState } from "react";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { timelineTranslations } from "@/locales/timeline-data";
-
 const colorConfig = {
     blue: {
         dot: "bg-blue-500",
@@ -481,52 +480,7 @@ export function Timeline() {
                             </span>
                         </motion.button>
                     </div>
-
-                    {/* Timeline End Marker */}
-                    {/* <motion.div
-                        initial={{ opacity: 0, scale: 0 }}
-                        whileInView={{ opacity: 1, scale: 1 }}
-                        transition={{ duration: 0.6, delay: 0.8 }}
-                        viewport={{ once: true }}
-                        className="relative flex justify-center mt-12"
-                    >
-                        <div className="absolute left-4 md:left-1/2 md:-translate-x-1/2">
-                            <div className="w-3 h-3 rounded-full bg-gradient-to-r from-cyan-500 to-blue-500 shadow-[0_0_20px_4px_rgba(6,182,212,0.6)]" />
-                        </div>
-                    </motion.div> */}
                 </div>
-
-                {/* CTA Section */}
-                <motion.div
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.6, delay: 1 }}
-                    viewport={{ once: true }}
-                    className="text-center mt-16 pt-12 border-t border-white/10"
-                >
-                    <p className="text-neutral-400 mb-6">
-                        {t("contact.ctaText")}
-                    </p>
-                    <a
-                        href="#contact"
-                        className="inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-semibold rounded-full hover:shadow-lg hover:shadow-cyan-500/25 transition-all hover:scale-105"
-                    >
-                        {t("contact.ctaButton")}
-                        <svg
-                            className="w-5 h-5"
-                            fill="none"
-                            stroke="currentColor"
-                            viewBox="0 0 24 24"
-                        >
-                            <path
-                                strokeLinecap="round"
-                                strokeLinejoin="round"
-                                strokeWidth={2}
-                                d="M17 8l4 4m0 0l-4 4m4-4H3"
-                            />
-                        </svg>
-                    </a>
-                </motion.div>
             </div>
 
             {/* Background Decorations */}
