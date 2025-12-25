@@ -13,8 +13,10 @@ import {
 import { useState } from "react";
 import { SpotlightContent } from "@/components/sections/spotlight";
 import { MainContent } from "./main-content";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 export function NavbarDemo() {
+    const { language, setLanguage } = useLanguage();
     const navItems = [
         {
             name: "Home",
@@ -51,7 +53,16 @@ export function NavbarDemo() {
                 <NavBody>
                     <NavbarLogo />
                     <NavItems items={navItems} />
-                    <div className="flex items-center gap-4">
+                    <div className="flex items-center gap-4 relative z-[70]">
+                        {/* Language Toggle */}
+                        <button
+                            onClick={() =>
+                                setLanguage(language === "id" ? "en" : "id")
+                            }
+                            className="px-3 py-1.5 rounded-full bg-white/5 border border-white/10 hover:border-blue-500/50 hover:bg-white/10 transition-all text-sm font-medium text-neutral-300 hover:text-blue-400 cursor-pointer"
+                        >
+                            {language === "id" ? "EN" : "ID"}
+                        </button>
                         {/* <NavbarButton variant="secondary">Login</NavbarButton> */}
                         <NavbarButton variant="primary">
                             Contact Me
@@ -86,6 +97,20 @@ export function NavbarDemo() {
                             </a>
                         ))}
                         <div className="flex w-full flex-col gap-4">
+                            {/* Language Toggle */}
+                            <button
+                                onClick={() => {
+                                    setLanguage(
+                                        language === "id" ? "en" : "id"
+                                    );
+                                    setIsMobileMenuOpen(false);
+                                }}
+                                className="w-full px-4 py-2 rounded-full bg-white/5 border border-white/10 hover:border-blue-500/50 hover:bg-white/10 transition-all text-sm font-medium text-neutral-300 hover:text-blue-400"
+                            >
+                                {language === "id"
+                                    ? "Switch to English"
+                                    : "Ganti ke Bahasa Indonesia"}
+                            </button>
                             {/* <NavbarButton
                                 onClick={() => setIsMobileMenuOpen(false)}
                                 variant="primary"

@@ -160,10 +160,7 @@ export function AboutMe() {
                         {t("about.bio.title")}
                     </h2>
                     <h3 className="text-3xl md:text-5xl font-bold text-white mb-4">
-                        Passionate Developer &{" "}
-                        <span className="bg-gradient-to-r from-blue-400 to-blue-300 bg-clip-text text-transparent">
-                            Problem Solver
-                        </span>
+                        {t("about.bio.heading")}
                     </h3>
                     <div className="w-20 h-1 bg-gradient-to-r from-blue-500 to-blue-300 mx-auto rounded-full" />
                 </motion.div>
@@ -176,7 +173,7 @@ export function AboutMe() {
                         whileInView={{ opacity: 1, x: 0 }}
                         transition={{ duration: 0.6, delay: 0.2 }}
                         viewport={{ once: true }}
-                        className="relative"
+                        className="relative flex justify-center md:justify-start"
                     >
                         {/* Profile Image */}
                         <div className="w-64 h-64 md:w-80 md:h-80 rounded-2xl bg-gradient-to-br from-blue-500/20 to-blue-300/20 border border-white/10 backdrop-blur-sm flex items-center justify-center overflow-hidden">
@@ -197,7 +194,7 @@ export function AboutMe() {
                         whileInView={{ opacity: 1, x: 0 }}
                         transition={{ duration: 0.6, delay: 0.4 }}
                         viewport={{ once: true }}
-                        className="text-neutral-300 space-y-6"
+                        className="text-neutral-300 space-y-6 text-center md:text-left"
                     >
                         <p className="text-xl md:text-2xl leading-relaxed">
                             {t("about.bio.paragraph1")}
@@ -281,7 +278,7 @@ export function AboutMe() {
                     className="mt-16 overflow-hidden"
                 >
                     <h4 className="text-center text-sm font-semibold text-neutral-400 uppercase tracking-wider mb-8">
-                        Technologies I Work With
+                        {t("about.techStackTitle")}
                     </h4>
                     <TechStackScroll techStack={techStack} />
                 </motion.div>

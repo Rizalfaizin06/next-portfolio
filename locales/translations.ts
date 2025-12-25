@@ -27,6 +27,7 @@ export const translations = {
 
         // About Me - Bio
         "about.bio.title": "Tentang Saya",
+        "about.bio.heading": "Developer Berdedikasi & Pemecah Masalah",
         "about.bio.paragraph1":
             "Saya adalah Fullstack Developer dengan pengalaman lebih dari 4 tahun di bidang pengembangan web, aplikasi mobile, IoT, dan manajemen jaringan. Memiliki kemampuan di Frontend (React, Next.js, Flutter) dan Backend (Node.js, Express, Laravel), serta keahlian dalam infrastruktur IT (MikroTik, Cisco, Linux Server).",
         "about.bio.paragraph2":
@@ -46,6 +47,7 @@ export const translations = {
         "about.network.title": "Network Engineering",
         "about.network.desc":
             "Konfigurasi dan manajemen jaringan menggunakan MikroTik, Cisco, routing, firewall, VPN, dan optimasi infrastruktur IT.",
+        "about.techStackTitle": "Teknologi yang Saya Gunakan",
 
         // Timeline
         "timeline.title": "Pengalaman Profesional",
@@ -56,9 +58,9 @@ export const translations = {
         // Portfolio Projects
         "projects.title": "Proyek Unggulan",
         "projects.filter.all": "Semua",
-        "projects.filter.webApp": "Web App",
+        "projects.filter.webapp": "Web App",
         "projects.filter.iot": "IoT",
-        "projects.filter.mobile": "Mobile App",
+        "projects.filter.mobileapp": "Mobile App",
         "projects.filter.system": "Sistem",
         "projects.viewDetails": "Lihat Detail",
 
@@ -98,6 +100,7 @@ export const translations = {
 
         // About Me - Bio
         "about.bio.title": "About Me",
+        "about.bio.heading": "Passionate Developer & Problem Solver",
         "about.bio.paragraph1":
             "I am a Fullstack Developer with over 4 years of experience in web development, mobile applications, IoT, and network management. Proficient in Frontend (React, Next.js, Flutter) and Backend (Node.js, Express, Laravel), as well as IT infrastructure (MikroTik, Cisco, Linux Server).",
         "about.bio.paragraph2":
@@ -117,6 +120,7 @@ export const translations = {
         "about.network.title": "Network Engineering",
         "about.network.desc":
             "Network configuration and management using MikroTik, Cisco, routing, firewall, VPN, and IT infrastructure optimization.",
+        "about.techStackTitle": "Technologies I Work With",
 
         // Timeline
         "timeline.title": "Professional Experience",
@@ -127,9 +131,9 @@ export const translations = {
         // Portfolio Projects
         "projects.title": "Featured Projects",
         "projects.filter.all": "All",
-        "projects.filter.webApp": "Web App",
+        "projects.filter.webapp": "Web App",
         "projects.filter.iot": "IoT",
-        "projects.filter.mobile": "Mobile App",
+        "projects.filter.mobileapp": "Mobile App",
         "projects.filter.system": "System",
         "projects.viewDetails": "View Details",
 
