@@ -8,10 +8,10 @@ export function SpotlightContent() {
     return (
         <div
             id="home"
-            className="h-[50rem] -mt-14 w-full rounded-md flex md:items-center md:justify-center bg-black/[0.96] antialiased bg-grid-white/[0.02] relative overflow-hidden max-w-full"
+            className="h-screen w-full rounded-md flex items-center justify-center bg-black/[0.96] antialiased bg-grid-white/[0.02] relative overflow-hidden max-w-full pt-0"
         >
             <Spotlight />
-            <div className="p-4 max-w-7xl mx-auto relative z-10 w-full pt-20 md:pt-0">
+            <div className="p-4 max-w-7xl mx-auto relative z-10 w-full">
                 <p className="mt-4 font-thin text-neutral-300 max-w-lg text-center mx-auto pb-10 text-2xl">
                     {t("spotlight.intro")}
                 </p>
